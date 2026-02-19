@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 import '../../features/auth/controllers/auth_controller.dart';
+import '../../features/cart/controllers/cart_controller.dart';
 import '../../features/home/controllers/home_controller.dart';
 
 class InitialBinding extends Bindings {
@@ -8,5 +9,6 @@ class InitialBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<AuthController>(() => AuthController(), fenix: true);
     Get.lazyPut<HomeController>(() => HomeController(), fenix: true);
+    Get.lazyPut<CartController>(() => CartController(), fenix: true);
   }
 }
